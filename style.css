@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+footer {
+  display: flex;
+  background-color: #f8f9fa !important;
+}
+
+button{
+  margin: 5px
+}
+
+
+li {
+  padding: 4px;
+}
+
+ul {
+  list-style: none;
+}
+
+h5 {
+  color: black;
+  text-transform: lowercase;
+  background-color: white;
+  text-decoration: none;
+}
+
+span {
+  color: black;
+  font-size: bold;
+}
+
+.cardbox {
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  margin: auto;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardbox .card {
+  width: 115px;
+  background-color: #80aff5;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 5px;
+  margin-right: 50px;
+}
+
+.wheel-and-hamster {
+  --dur: 1s;
+  position: relative;
+  width: 12em;
+  height: 12em;
+  font-size: 14px;
+}
+
+.wheel,
+.hamster,
+.hamster div,
+.spoke {
+  position: absolute;
+}
+
+.wheel,
+.spoke {
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wheel {
+  background: radial-gradient(100% 100% at center,hsla(0,0%,60%,0) 47.8%,hsl(0,0%,60%) 48%);
+  z-index: 2;
+}
+
+.spoke {
+  background: radial-gradient(100% 100% at center,hsl(0,0%,60%) 4.8%,hsla(0,0%,60%,0) 5%),
+		linear-gradient(hsla(0,0%,55%,0) 46.9%,hsl(0,0%,65%) 47% 52.9%,hsla(0,0%,65%,0) 53%) 50% 50% / 99% 99% no-repeat;
+}
+
+.spokeRight {
+  animation: spinRight var(--dur) linear infinite;
+}
+
+.spokeLeft {
+  animation: spinLeft var(--dur) linear infinite;
+}
+
+
+@keyframes spinRight {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes spinLeft {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-1turn);
+  }
+}
+
+.loader-input{
+  max-width: 350px;
+}
+
+.loader-input:focus{
+  box-shadow: none;
+  border-color: green;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .card-body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
