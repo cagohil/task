@@ -1,7 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-padding-top: 100px;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -62,7 +64,7 @@ span {
 }
 
 .wheel-and-hamster {
-  --dur: 1s;
+  --dur: 2s;
   position: relative;
   width: 12em;
   height: 12em;
@@ -96,11 +98,11 @@ span {
 }
 
 .spokeRight {
-  animation: spinRight var(--dur) linear infinite;
+  animation: spinRight var(--dur) linear 1;
 }
 
 .spokeLeft {
-  animation: spinLeft var(--dur) linear infinite;
+  animation: spinLeft var(--dur) linear 1;
 }
 
 
@@ -110,7 +112,7 @@ span {
   }
 
   to {
-    transform: rotate(1turn);
+    transform: rotate(0.5turn);
   }
 }
 
@@ -120,7 +122,7 @@ span {
   }
 
   to {
-    transform: rotate(-1turn);
+    transform: rotate(-0.5turn);
   }
 }
 

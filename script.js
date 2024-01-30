@@ -1,3 +1,5 @@
+
+// task 1 start here
 function alertText() {
   alert("hello world");
 }
@@ -52,8 +54,12 @@ function makeUpperAndLower() {
     document.getElementById("buttonLowerAndUppercase").innerHTML = "uppercase";
   }
 }
+// task 1 end here
 
 
+
+
+// task 2 start here
 function leftSpinner() {
     document.querySelector(".spinner-displayer").classList.remove("spokeRight");
     document.querySelector(".spinner-displayer").classList.add("spokeLeft");
@@ -67,9 +73,13 @@ function rightSpinner() {
 function stopSpinner() {
     document.querySelector(".spinner-displayer").classList.remove("spokeLeft", "spokeRight");
 }
+// task 2 end here
 
+
+
+// task 3 start here
 function valueSpinner(){
   const myInput = document.querySelector('#my-input');
   console.log(myInput.value);
-  myInput.reset();
+  myInput.value = null;
 }
