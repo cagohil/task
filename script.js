@@ -85,6 +85,7 @@ function valueSpinner() {
   for (let i = 0; i <= repeatCount; i++) {
     setTimeout(() => {
       wheelBox.style.animation = 'none';
+      wheelBox.style.backgroundColor = 'white';
       void wheelBox.offsetWidth;
       wheelBox.style.animation = `spin var(--dur) linear ${myInput.value}`;
     }, i * parseFloat(myInput.value) * 0);

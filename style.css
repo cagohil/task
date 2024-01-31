@@ -178,12 +178,12 @@ span {
 @keyframes spin {
   from {
     transform: rotate(0);
-    background-color: Blue;
+    /* background-color: Blue; */
   }
 
   to {
     transform: rotate(1turn);
-    background-color: black;
+    /* background-color: black; */
   }
 }
 

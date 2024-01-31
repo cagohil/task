@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+alert(userAgent)
+    // Windows Phone must come first because its UA also contains "Android"
+   
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+    if (/android/i.test(userAgent)) {
+        window.location.href="https://play.google.com/store/apps/details?id=com.comtech"
+        return "Android";
+    }
+ 
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.href="https://apps.apple.com/us/app/comtech-gold/id6450447371"
+        return "iOS";
+    }
+    return "unknown";
+}
+getMobileOperatingSystem()
+</script>
+ 
+ 
+</body>
+</html>
