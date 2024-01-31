@@ -73,8 +73,6 @@ function stopSpinner() {
 }
 // task 2 end here
 
-
-
 // task 3 start here
 function valueSpinner() {
   const myInput = document.querySelector("#my-input");
@@ -82,12 +80,32 @@ function valueSpinner() {
 
   const repeatCount = 0;
 
+  // random color generator function
+  function get_random_color() {
+    function c() {
+      var hex = Math.floor(Math.random() * 256).toString(16);
+      return ("0" + String(hex)).substr(-2); // pad with zero
+    }
+    return "#" + c() + c() + c();
+  }
+
+
   for (let i = 0; i <= repeatCount; i++) {
-    setTimeout(() => {
-      wheelBox.style.animation = 'none';
-      wheelBox.style.backgroundColor = 'white';
-      void wheelBox.offsetWidth;
-      wheelBox.style.animation = `spin var(--dur) linear ${myInput.value}`;
-    }, i * parseFloat(myInput.value) * 0);
+    wheelBox.style.animation = "none";
+    void wheelBox.offsetWidth;
+    wheelBox.style.animation = `spin var(--dur) linear ${myInput.value}`;
+    document.styleSheets[0].insertRule(
+      `\
+    @keyframes spin {\
+      from {\
+         transform: rotateZ(0deg);\
+         background-color: ${get_random_color()};\
+        }\
+      to {\
+       transform: rotateZ(360deg);\
+       background-color: ${get_random_color()}\
+       }\
+    }`
+    );
   }
 }

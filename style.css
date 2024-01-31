@@ -101,11 +101,11 @@ span {
 }
 
 #task-2 .spokeRight {
-  animation: spinRight var(--dur) linear 1;
+  animation: spinRight var(--dur) linear infinite;
 }
 
 #task-2 .spokeLeft {
-  animation: spinLeft var(--dur) linear 1;
+  animation: spinLeft var(--dur) linear infinite;
 }
 
 
@@ -175,17 +175,15 @@ span {
 }
 
 
-@keyframes spin {
+/* @keyframes spin {
   from {
     transform: rotate(0);
-    /* background-color: Blue; */
   }
 
   to {
     transform: rotate(1turn);
-    /* background-color: black; */
   }
-}
+} */
 
 /* task 3 css end here */
 
