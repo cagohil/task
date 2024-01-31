@@ -23,7 +23,6 @@ button{
   margin: 5px
 }
 
-
 li {
   padding: 4px;
 }
@@ -63,22 +62,26 @@ span {
   margin-right: 50px;
 }
 
-.wheel-and-hamster {
-  --dur: 2s;
+
+
+/* task 2 css start here*/
+
+#task-2 .wheel-box {
+  --dur: 1s;
   position: relative;
   width: 12em;
   height: 12em;
   font-size: 14px;
 }
 
-.wheel,
+#task-2 .wheel,
 .hamster,
 .hamster div,
 .spoke {
   position: absolute;
 }
 
-.wheel,
+#task-2 .wheel,
 .spoke {
   border-radius: 50%;
   top: 0;
@@ -87,21 +90,21 @@ span {
   height: 100%;
 }
 
-.wheel {
+#task-2 .wheel {
   background: radial-gradient(100% 100% at center,hsla(0,0%,60%,0) 47.8%,hsl(0,0%,60%) 48%);
   z-index: 2;
 }
 
-.spoke {
+#task-2 .spoke {
   background: radial-gradient(100% 100% at center,hsl(0,0%,60%) 4.8%,hsla(0,0%,60%,0) 5%),
 		linear-gradient(hsla(0,0%,55%,0) 46.9%,hsl(0,0%,65%) 47% 52.9%,hsla(0,0%,65%,0) 53%) 50% 50% / 99% 99% no-repeat;
 }
 
-.spokeRight {
+#task-2 .spokeRight {
   animation: spinRight var(--dur) linear 1;
 }
 
-.spokeLeft {
+#task-2 .spokeLeft {
   animation: spinLeft var(--dur) linear 1;
 }
 
@@ -112,7 +115,7 @@ span {
   }
 
   to {
-    transform: rotate(0.5turn);
+    transform: rotate(1turn);
   }
 }
 
@@ -122,9 +125,72 @@ span {
   }
 
   to {
-    transform: rotate(-0.5turn);
+    transform: rotate(-1turn);
   }
 }
+/* task 2 css end here */
+
+
+
+
+/* task 3 css start here */
+#task-3 .wheel-box {
+  --dur: 2s;
+  position: relative;
+  width: 12em;
+  border-radius: 50%;
+  height: 12em;
+  font-size: 14px;
+}
+
+#task-3 .wheel,
+.hamster,
+.hamster div,
+.spoke {
+  position: absolute;
+}
+
+#task-3 .wheel,
+.spoke {
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#task-3 .wheel {
+  background: radial-gradient(100% 100% at center,hsla(0,0%,60%,0) 47.8%,hsl(0,0%,60%) 48%);
+  z-index: 2;
+}
+
+#task-3 .spoke {
+  background: radial-gradient(100% 100% at center,hsl(0,0%,60%) 4.8%,hsla(0,0%,60%,0) 5%),
+		linear-gradient(hsla(0,0%,55%,0) 46.9%,hsl(0,0%,65%) 47% 52.9%,hsla(0,0%,65%,0) 53%) 50% 50% / 99% 99% no-repeat;
+    background-color: black;
+}
+
+#task-3 .spokeSpin {
+  animation: spin var(--dur) linear 1;
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+    background-color: Blue;
+  }
+
+  to {
+    transform: rotate(1turn);
+    background-color: black;
+  }
+}
+
+/* task 3 css end here */
+
+
+
 
 .loader-input{
   max-width: 350px;

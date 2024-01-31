@@ -1,4 +1,3 @@
-
 // task 1 start here
 function alertText() {
   alert("hello world");
@@ -56,14 +55,11 @@ function makeUpperAndLower() {
 }
 // task 1 end here
 
-
-
-
 // task 2 start here
 function leftSpinner() {
-    document.querySelector(".spinner-displayer").classList.remove("spokeRight");
-    document.querySelector(".spinner-displayer").classList.add("spokeLeft");
-  }
+  document.querySelector(".spinner-displayer").classList.remove("spokeRight");
+  document.querySelector(".spinner-displayer").classList.add("spokeLeft");
+}
 
 function rightSpinner() {
   document.querySelector(".spinner-displayer").classList.remove("spokeLeft");
@@ -71,15 +67,26 @@ function rightSpinner() {
 }
 
 function stopSpinner() {
-    document.querySelector(".spinner-displayer").classList.remove("spokeLeft", "spokeRight");
+  document
+    .querySelector(".spinner-displayer")
+    .classList.remove("spokeLeft", "spokeRight");
 }
 // task 2 end here
 
 
 
 // task 3 start here
-function valueSpinner(){
-  const myInput = document.querySelector('#my-input');
-  console.log(myInput.value);
-  myInput.value = null;
+function valueSpinner() {
+  const myInput = document.querySelector("#my-input");
+  const wheelBox = document.querySelector("#spoke");
+
+  const repeatCount = 0;
+
+  for (let i = 0; i <= repeatCount; i++) {
+    setTimeout(() => {
+      wheelBox.style.animation = 'none';
+      void wheelBox.offsetWidth;
+      wheelBox.style.animation = `spin var(--dur) linear ${myInput.value}`;
+    }, i * parseFloat(myInput.value) * 0);
+  }
 }
