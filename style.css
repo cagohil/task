@@ -175,7 +175,7 @@ span {
 }
 
 
-/* @keyframes spin {
+@keyframes spin {
   from {
     transform: rotate(0);
   }
@@ -183,7 +183,7 @@ span {
   to {
     transform: rotate(1turn);
   }
-} */
+}
 
 /* task 3 css end here */
 

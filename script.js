@@ -55,6 +55,9 @@ function makeUpperAndLower() {
 }
 // task 1 end here
 
+
+
+
 // task 2 start here
 function leftSpinner() {
   document.querySelector(".spinner-displayer").classList.remove("spokeRight");
@@ -73,12 +76,10 @@ function stopSpinner() {
 }
 // task 2 end here
 
-// task 3 start here
-function valueSpinner() {
-  const myInput = document.querySelector("#my-input");
-  const wheelBox = document.querySelector("#spoke");
 
-  const repeatCount = 0;
+
+
+// task 3 start here
 
   // random color generator function
   function get_random_color() {
@@ -89,23 +90,21 @@ function valueSpinner() {
     return "#" + c() + c() + c();
   }
 
+  function valueSpinner() {
+    const myInput = document.querySelector("#my-input");
+    const wheelBox = document.querySelector("#spoke");
 
-  for (let i = 0; i <= repeatCount; i++) {
     wheelBox.style.animation = "none";
     void wheelBox.offsetWidth;
     wheelBox.style.animation = `spin var(--dur) linear ${myInput.value}`;
-    document.styleSheets[0].insertRule(
-      `\
-    @keyframes spin {\
-      from {\
-         transform: rotateZ(0deg);\
-         background-color: ${get_random_color()};\
-        }\
-      to {\
-       transform: rotateZ(360deg);\
-       background-color: ${get_random_color()}\
-       }\
-    }`
-    );
-  }
-}
+
+    var i = 0;
+    let interval = setInterval(() => {
+      if (i != myInput.value) {
+        wheelBox.style.backgroundColor = `${get_random_color()}`;
+        i++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 2000);
+  };
